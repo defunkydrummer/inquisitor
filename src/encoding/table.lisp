@@ -492,3 +492,19 @@
      (((#xa6 #xff)) init          1.0)))
   ) ;; eval-when
 
+;;;
+;;; Spanish (actually, ISO Latin-1)
+;;;
+
+(define-dfa iso-8859-1
+  (init
+   ((#xe9) init 1.0) ; tilde e
+   ((#xc9) init 1.0) ; tilde e uppercase
+   ((#xe8) init 1.0) ; backtilde e -- added for french
+   ((#xe2) init 1.0) ; a circumflex -- added for french
+   ((#xc2) init 1.0) ; a circumflex uppercase -- added for french
+   ((#xe7) init 1.0) ; c cedilla -- added for french and portuguese
+   ((#xf1) init 1.0) ; spanish ñ
+   ((#xd1) init 1.0) ; spanish ñ uppercase
+   ((#xad) init 1.0) ; SHY
+   ))

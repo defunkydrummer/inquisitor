@@ -391,6 +391,19 @@
      #+lispworks (progn #+win32 '(win32:code-page :id 1257) #-win32 :cannot-treat)
      #+allegro :1257)
 
+;;; Latin-1 for spanish
+    
+    (:name :iso-8859-1
+     :type :es
+     :impl-name
+     #+sbcl :iso-8859-1
+     #+ccl  :iso-8859-1
+     #+clisp ,charset:iso-8859-1
+     #+ecl  :iso-8859-1
+     #+abcl :iso-8859-1
+     #+lispworks :cannot-treat
+     #+allegro :cannot-treat)
+
 ;;; End of line markers
 
     (:name :lf

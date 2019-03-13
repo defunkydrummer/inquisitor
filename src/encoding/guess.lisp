@@ -70,6 +70,7 @@
     (:gr guess-gr)   ;; greek
     (:hw guess-hw)   ;; hebrew
     (:pl guess-pl)   ;; polish
+    (:es guess-es)   ;; spanish
     (:bl guess-bl))) ;; baltic
 
 (defun list-available-scheme ()
@@ -222,3 +223,8 @@ independent_ name, `order` is a state at this function stops guessing process."
 
 (defun guess-bl (buffer &optional order state)
   (guess (buffer order state (c1) (:utf-8 :iso-8859-13 :cp1257))))
+
+(defun guess-es (buffer &optional order state)
+  "Guess for Spanish language"
+  (guess (buffer order state (c1) (:iso-8859-1 :utf-8))))
+
